@@ -30,9 +30,9 @@ with open(csvpath, newline='') as csvfile:
 ##GOOD!    print(total_revenue)
 
 #Average Change
-    i = 0
-    for i in range(len(revenue) - 1):
-        profit_loss = int(revenue[i+1]) - int(revenue[i])
+    avmonth = 0
+    for avmonth in range(len(revenue) - 1):
+        profit_loss = int(revenue[avmonth+1]) - int(revenue[avmonth])
  
  #Append profit_loss
         revenue_change.append(profit_loss)
@@ -48,16 +48,16 @@ with open(csvpath, newline='') as csvfile:
 
 ##GOOD!    print(profit_increase)
     
-    k = revenue_change.index(profit_increase)
-    month_increase = month[k+1]
+    profincrease = revenue_change.index(profit_increase)
+    month_increase = month[profincrease+1]
     
 #Greatest Revenue Decrease
     profit_decrease = min(revenue_change)
 
 ##GOOD!    print(profit_decrease)
     
-    j = revenue_change.index(profit_decrease)
-    month_decrease = month[j+1]
+    profdecrease = revenue_change.index(profit_decrease)
+    month_decrease = month[profdecrease+1]
 
 
 #Print Statements
